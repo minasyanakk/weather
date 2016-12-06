@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+
+	"name": "weather",  
+	"version": "0.1",  
+	"description": "weather in Kiyv", // Описание расширения
+
+	"permissions": [ 
+			"https://*/*", 
+			"http://*/*" 
+					],
+
+	"browser_action": {
+		"default_title": "weather", // Название кнопки
+		"default_icon": "images/icon.png", // Иконка для кнопки
+		"default_popup": "popup.html" // Всплывающее окно
+	},
+
+	"options_page": "options.html" // Страница настроек
+}
