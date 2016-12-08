@@ -39,9 +39,11 @@ $(".switch").click(function(){
                 var dat = xh.responseText;
 
                 var last = $('.wall_post_text:first', dat);
-               
-                 $( "a" ).addClass( "white" );
+                var tim = $('.rel_date:first', dat);
+              
                 $('#tsn').html(last);
+                 $('#tim').html(tim);
+              
               
 
             }
