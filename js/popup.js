@@ -7,7 +7,6 @@ $(".switch").click(function(){
   // добавляем к ссылки по которой щёлкнули класс activeClass
   $("body").addClass("grey darken-3");
  
-
 });
 
     xhr = new XMLHttpRequest();
@@ -23,6 +22,26 @@ $(".switch").click(function(){
                 var last_video = $('.title', data);
                
                 $('#title').html(last_video);
+              
+
+            }
+        }
+    }
+    //
+    xh = new XMLHttpRequest();
+    xh.open("GET", "https://vk.com/tsnua", true);
+    xh.send(null);
+    xh.onreadystatechange = function() {
+        if (xh.readyState == 4) 
+        {
+            if (xh.responseText) 
+            {
+                var dat = xh.responseText;
+
+                var last = $('.wall_post_text:first', dat);
+               
+                 $( "a" ).addClass( "white" );
+                $('#tsn').html(last);
               
 
             }
